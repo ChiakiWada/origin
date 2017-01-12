@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" type="text/css" href="kashika0106.css">
+  <script type="text/javascript" src="kashika_search0106.js"></script>
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+  <title>データベース可視化sample</title>
+  <script type="text/javascript" language="javascript">
+      function KensakuButtonClick() {
+        document.getElementById("key_title").innerText = "";
+        document.getElementById("key_title").innerText = "～キーワード「" + document.forms.id_form1.id_textBox1.value + "」の検索結果～";
+        var text = "";
+        <% for doc in @docs: %>
+          text = text + <%= doc.yadonum  %> + ",";
+        <% end %>
+        document.getElementById("kekka_ichiran").innerText = "";
+        document.getElementById("kekka_ichiran").innerText = text;
+        // document.getElementById("kekka_ichiran").innerHTML = k_k;
+        insert();
+      }
+
+      function KensakuButtonClick2() {
+        target = document.getElementById("keywords_output");
+        target.innerText = "＊＊＊キーワード「" + document.forms.id_form2.id_textBox2.value + "」の検索結果＊＊＊";
+        //target.innerText = document.id_form1.id_textBox1.value;//これでもOK
+      }
+
+      function keywords_hyouji(){
+
+      }
+
+      function insert() {
+        var kekka = "";
+        <% for doc in @docs: %>
+          kekka = kekka + "<table border=\"2\" width=\"60%\" height=\"50%\" cellspacing=\"5\" cellpadding=\"2\"> <tr align=\"center\" bgcolor=\"#ffe4c4\"><td width=\"60%\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">";
+          kekka = kekka + <%= doc.yadonum  %> + "</a> </td><td width=\"20%\"><div class=\"en\"><div class=\"en-M1\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">満足best</a><p>";
+          kekka = kekka + <%= doc.tm  %> + "</p> </div></div></td><td width=\"20%\"><div class=\"en\"><div class=\"en-M1\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">がっかりbest</a><p>";
+          kekka = kekka + <%= doc.tg  %> + "</p> </div></div></td></tr></table><br />";
+        <% end %>
+        // var k_k = "<table border=\"2\" width=\"60%\" height=\"50%\" cellspacing=\"5\" cellpadding=\"2\"> <tr align=\"center\" bgcolor=\"#ffe4c4\">";
+        // k_k = k_k + "<td width=\"60%\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">ＯＯホテル</a> </td>";
+        // k_k = k_k + "<td width=\"20%\"><div class=\"en\"><div class=\"en-M1\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">風呂</a><p>40</p> </div></div></td>";
+        // k_k = k_k + "<td width=\"20%\"><div class=\"en\"><div class=\"en-M1\"> <a href=\"http://travel.rakuten.co.jp/HOTEL/147158/147158_std.html\" target=\"_blank\">立地</a><p>20</p> </div></div></td></tr></table><br />";
+        document.getElementById("kekka_ichiran2").innerHTML = "";
+        document.getElementById("kekka_ichiran2").innerHTML = kekka;
+      }
+  </script>
+</head>
+  <body>
+    【宿泊施設検索システム】http://java-script.seesaa.net/category/3204972-1.html
+    <br /><br />
+    <!-- <form name="form1">
+      検索ワード：<input type="text" name="keywords" id="keywords">
+      <input type="button" name="btn_insert" id="btn_insert" value="検索"> -->
+    <form name="form1" id="id_form1" action="">
+      検索ワード：<input name="textBox1" id="id_textBox1" type="text" value="" />
+      <input type="button" name="btn_insert" id="btn_insert" value="検索" onclick="KensakuButtonClick();" />
+    </form>
+    並び替え：
+    <input type="button" name="btn_sougou" id="btn_sougou" value="総合数">
+    <input type="button" name="btn_sougou" id="btn_manzoku" value="満足数">
+    <br /><br />
+    <div id="key_title">～キーワード「」の検索結果～</div><br /><br />
+    <div id="kekka_ichiran">（ここに検索結果が表示されます）</div><br /><br />
+    <div id="kekka_ichiran2">（ここに検索結果が表示されます）</div><br /><br />
+
+    <br /><br />
+
+    <table>
+      <thead>
+        <tr>
+            <td>yadonum</td>
+            <td>tm</td>
+            <td>tg</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% console.log(@docs); %>
+        <% for doc in @docs: %>
+          <tr>
+              <td><%= doc.yadonum  %></td>
+              <td><%= doc.tm  %></td>
+              <td><%= doc.tg  %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br /><br />
+    <% for doc in @docs : %>
+      <% if doc.yadonum == '87' : %>
+          <p><%= doc.yadonum  %></p>
+          <p><%= doc.tm  %></p>
+          <p><%= doc.tg  %></p>
+      <% else : %>
+        <p>List is empty</p>
+      <% end %>
+    <% end %>
+
+    <script type="text/javascript">
+    </script>
+
+  </body>
+</html>

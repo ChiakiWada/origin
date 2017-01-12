@@ -1,0 +1,36 @@
+
+ <!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Sample1</title>
+<script type="text/javascript" src="sample2_js.js"></script>
+<script type="text/javascript" language="javascript">
+        function KensakuButtonClick() {
+          target = document.getElementById("output");
+          target.innerText = "キーワード" + document.forms.id_form1.id_textBox1.value + "の検索結果";
+          //target.innerText = document.id_form1.id_textBox1.value;//これでもOK
+        }
+
+  </script>
+</head>
+
+<body>
+  <div id="a" title="箱根" />
+  <div id="b" title="abc" />
+  <form name="form1" id="id_form1" action="">
+    <input name="textBox1" id="id_textBox1" type="text" value="" />
+    <input type="button" value="検索" onclick="KensakuButtonClick();" />
+  </form>
+  <p>******</p>
+  <div id="output"></div>
+  <hr/>
+
+  <input type="button" value="総合数">
+  <input type="button" value="総合満足数">
+  <input type="button" value="部屋">
+  <input type="button" value="風呂">
+  <br><br><br>
+
+</body>
+</html>

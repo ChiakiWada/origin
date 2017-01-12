@@ -1,0 +1,147 @@
+/*満足*/
+.en {
+  display: inline-block;
+  _display: inline;
+  vertical-align:middle;/*背景を中央揃いに*/
+}
+.en a,
+.en h1,
+.en p {
+ color: #fff; /* 文字を白色に */
+ margin: 0; /* h1とpの余白をリセット */
+ text-shadow:
+        0 2px 0 black,
+        1px 0 0 black,
+        0 -2px 0 black,
+        -1px 0 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black
+        ;
+}
+
+/*満足デフォルト*/
+.en-M-def {
+ width:120px; height:120px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M-def a, .en-M-def h1 {font-size:21px; padding-top:39px; /* 真ん中にまで文字を下ろす */}
+.en-M-def p {font-size:21px; font-weight:bold;}
+
+/*満足0*/
+.en-0 {
+ width:90px; height:90px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #777777;
+ /* 背景色 */
+ background-color:#C0C0C0;
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-0 a, .en-0 h1 {font-size:15px; padding-top:30px; /* 真ん中にまで文字を下ろす */}
+.en-0 p {font-size:15px; font-weight:bold;}
+
+/*満足1*/
+.en-M1 {
+ width:140px; height:140px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M1 a, .en-M1 h1 {font-size:27px; padding-top:48px; /* 真ん中にまで文字を下ろす */}
+.en-M1 p {font-size:27px; font-weight:bold;}
+
+/*満足2*/
+.en-M2 {
+ width:130px; height:130px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ background: rgba(255,0,0,0.85);
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M2 a, .en-M2 h1 {font-size:25px; padding-top:45px; /* 真ん中にまで文字を下ろす */}
+.en-M2 p {font-size:25px; font-weight:bold;}
+
+/*満足3*/
+.en-M3 {
+ width:120px; height:120px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ background: rgba(255,0,0,0.7);
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M3 a, .en-M3 h1 {font-size:23px; padding-top:42px; /* 真ん中にまで文字を下ろす */}
+.en-M3 p {font-size:23px; font-weight:bold;}
+
+/*満足4*/
+.en-M4 {
+ width:110px; height:110px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ background: rgba(255,0,0,0.55);
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M4 a, .en-M4 h1 {font-size:21px; padding-top:39px; /* 真ん中にまで文字を下ろす */}
+.en-M4 p {font-size:21px; font-weight:bold;}
+
+/*満足5*/
+.en-M5 {
+ width:100px; height:100px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ background: rgba(255,0,0,0.5);
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M5 a, .en-M5 h1 {font-size:17px; padding-top:33px; /* 真ん中にまで文字を下ろす */}
+.en-M5 p {font-size:17px; font-weight:bold;}
+
+/*満足6*/
+.en-M6 {
+ width:90px; height:90px;
+ text-align: center;/* 中央寄せ */
+ border: 5px double #b22222;
+ /* 背景色 */
+ background-color:#ff2828;
+ background: rgba(255,0,0,0.35);
+ /* 角を丸くする */
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+}
+.en-M6 a, .en-M6 h1 {font-size:15px; padding-top:30px; /* 真ん中にまで文字を下ろす */}
+.en-M6 p {font-size:15px; font-weight:bold;}
